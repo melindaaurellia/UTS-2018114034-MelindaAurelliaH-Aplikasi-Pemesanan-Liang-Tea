@@ -29,11 +29,13 @@ class DataController extends Controller
         $request->validate([
             'name' => 'required|unique:data|max:255',
             'description' => 'required',
+            'harga' => 'required|numeric',
         ]);
         $data= new Data;
 
         $data->name = $request->name;
         $data->description = $request->description;
+        $data->harga = $request->harga;
 
         $data->save();
 
@@ -57,11 +59,13 @@ class DataController extends Controller
         $request->validate([
             'name' => 'required|unique:data|max:255',
             'description' => 'required',
+            'harga' => 'required|numeric',
         ]);
 
         Data::find($id)->update([
             'name' => $request->name,
             'description' => $request->description,
+            'harga' => $request->harga,
         ]);
 
         return redirect('/data');

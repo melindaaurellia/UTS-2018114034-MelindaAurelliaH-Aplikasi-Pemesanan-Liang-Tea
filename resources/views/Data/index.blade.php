@@ -9,6 +9,7 @@
     <tr>
       <th scope="col">Nama</th>
       <th scope="col">Description</th>
+      <th scope="col">Harga</th>
       <th scope="col"></th>
       <th scope="col"></th>
     </tr>
@@ -18,6 +19,7 @@
     <tr>
     <td><a href="/data/{{$d->id}}">{{$d->name}}</td>
     <td>{!!$d->description !!}</td>
+    <td>{!!$d->harga !!}</td>
     <td><a href="/data/{{$d->id}}/edit"><button type="button" class="btn btn-outline-secondary">Edit</a></button></td>
     <form action="/data/{{ $d->id}}" method="POST">
     @csrf

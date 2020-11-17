@@ -24,7 +24,7 @@
         <a class="nav-link" href="/drinks">Drinks Menu<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/data">Drinks Data</span></a>
+        <a class="nav-link" href="/data">Drinks Category</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Pemesanan</a>
