@@ -1,0 +1,76 @@
+<?php
+
+namespace App\Http\Controllers;
+use App\Models\Data;
+use Illuminate\Http\Request;
+
+class DataController extends Controller
+{
+    public function welcome()
+    {
+
+        return view('data.welcome');
+    }
+    public function index()
+    {
+        $data= Data::orderby('id', 'desc')->paginate(5);
+
+        return view('data.index', compact('data'));
+    }
+
+    public function create()
+    {
+
+        return view('data.create');
+    }
+
+    public function store(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|unique:data|max:255',
+            'description' => 'required',
+        ]);
+        $data= new Data;
+
+        $data->name = $request->name;
+        $data->description = $request->description;
+
+        $data->save();
+
+        return redirect('/data');
+    }
+
+    public function show($id)
+    {
+        $d = Data::where('id', $id)->first();
+        return view('data.show', ['d'=>$d]);
+    }
+
+    public function edit($id)
+    {
+        $d = Data::where('id', $id)->first();
+        return view('data.edit', ['d'=>$d]);
+    }
+
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'name' => 'required|unique:data|max:255',
+            'description' => 'required',
+        ]);
+
+        Data::find($id)->update([
+            'name' => $request->name,
+            'description' => $request->description,
+        ]);
+
+        return redirect('/data');
+    }
+
+    public function destroy($id)
+    {
+        Data::find($id)->delete();
+        return redirect('/data');
+    }
+
+}
