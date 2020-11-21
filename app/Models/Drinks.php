@@ -8,5 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Drinks extends Model
 {
     use HasFactory;
-    protected $guarded = ['mana'];
+    protected $guarded = ['nama'];
+
+    public function data()
+    {
+        return $this->belongsTo('App\Models\Data');
+    }
 }

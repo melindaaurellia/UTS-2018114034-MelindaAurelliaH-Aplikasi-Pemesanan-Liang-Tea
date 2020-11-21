@@ -27,9 +27,11 @@
         <a class="nav-link" href="/data">Drinks Category</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Pemesanan</a>
+        <a class="nav-link" href="/trans">Transaksi</a>
       </li>
-     
+      <li class="nav-item">
+        <a class="nav-link" href="/groups">Groups Transaksi</a>
+      </li>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>

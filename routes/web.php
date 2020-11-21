@@ -3,7 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DrinksController;
 use App\Http\Controllers\DataController;
-
+use App\Http\Controllers\TransController;
+use App\Http\Controllers\GroupsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,4 +28,6 @@ Route::get('', [DrinksController::class, 'welcome']);
 Route::resources([
     'drinks' => DrinksController::class,
     'data' => DataController::class,
+    'trans' => TransController::class,
+    'groups' => GroupsController::class,
 ]);

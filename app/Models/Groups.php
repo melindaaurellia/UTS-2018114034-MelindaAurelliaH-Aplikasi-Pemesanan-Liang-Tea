@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Data extends Model
+class Groups extends Model
 {
     use HasFactory;
-    protected $guarded = ['name'];
+    protected $guarded = ['nama'];
 
-    public function drinks()
+    public function trans()
     {
-        return $this->hasMany('App\Models\Drinks');
+        return $this->hasMany('App\Models\trans');
     }
 }

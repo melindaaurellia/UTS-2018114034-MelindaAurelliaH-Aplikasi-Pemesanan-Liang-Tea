@@ -13,7 +13,7 @@ class DataController extends Controller
     }
     public function index()
     {
-        $data= Data::orderby('id', 'desc')->paginate(5);
+        $data= Data::orderby('id', 'desc')->paginate(3);
 
         return view('data.index', compact('data'));
     }
@@ -23,6 +23,7 @@ class DataController extends Controller
 
         return view('data.create');
     }
+
 
     public function store(Request $request)
     {
@@ -40,12 +41,6 @@ class DataController extends Controller
         $data->save();
 
         return redirect('/data');
-    }
-
-    public function show($id)
-    {
-        $d = Data::where('id', $id)->first();
-        return view('data.show', ['d'=>$d]);
     }
 
     public function edit($id)

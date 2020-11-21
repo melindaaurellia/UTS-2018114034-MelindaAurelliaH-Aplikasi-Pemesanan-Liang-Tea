@@ -28,12 +28,16 @@ class DrinksController extends Controller
     {
         $request->validate([
             'nama' => 'required|unique:drinks|max:255',
+            'image' => 'required',
             'size' => 'required',
+            'data_id' => 'required'
         ]);
         $drinks = new Drinks;
 
         $drinks->nama = $request->nama;
+        $drinks->image = $request->image;
         $drinks->size = $request->size;
+        $drinks->data_id = $request->data_id;
 
         $drinks->save();
 
@@ -56,12 +60,16 @@ class DrinksController extends Controller
     {
         $request->validate([
             'nama' => 'required|unique:drinks|max:255',
+            'image' => 'required',
             'size' => 'required',
+            'data_id' => 'required'
         ]);
 
         Drinks::find($id)->update([
             'nama' => $request->nama,
-            'size' => $request->size
+            'image' => $request->image,
+            'size' => $request->size,
+            'data_id' => $request->data_id
         ]);
 
         return redirect('/drinks');
