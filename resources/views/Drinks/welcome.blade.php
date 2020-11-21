@@ -1,7 +1,14 @@
 @extends('layouts.app')
 
-@section('title', 'Aplikasi Pemesanan')
+@section('title', 'Aplikasi Pemesanan Daily Fresh')
 @section('content')
-    <br>Selamat Datang di Aplikasi Pemesanan Liang Tea</br>
+<div class="card" >
+    <br></br>
+    <p><h3>HALLO! :)<h3>
+    Selamat Datang di Aplikasi Pemesanan Daily Fresh~
+    <br>Kami menjual minuman Liang Tea dan Susu Jelly</br>
+    <br></br>
+
+<div>
 @endsection
    

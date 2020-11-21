@@ -12,7 +12,7 @@
     <p class="card-text">{!!$d->harga !!}</p>
 
     <hr>
-    <a href="/drinks/data" class="card-link btn-warning">Tambah Menu</a>
+  
     @foreach ($d->drinks as $drink)
     <li> {{$drink->nama}} </li>
     @endforeach

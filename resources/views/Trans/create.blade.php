@@ -42,6 +42,14 @@
 @enderror
 
   </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Groups ID</label>
+    <input type="text" class="form-control" name="groups_id" id="exampleInputPassword1" value="{{ old('groups_id')}}">
+    @error('groups_id')
+    <div class="alert alert-danger">{{ $message }}</div>
+@enderror
+
+  </div>
   <button type="submit" class="btn btn-outline-secondary">Tambah</button>
 </form>
 
