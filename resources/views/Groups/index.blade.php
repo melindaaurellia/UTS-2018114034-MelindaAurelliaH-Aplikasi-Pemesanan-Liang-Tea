@@ -2,7 +2,7 @@
 
 @section('title', 'Groups')
 @section('content')
-<a href="/groups/create" type="button" class="btn btn-secondary mb-2 btn-sm">Tambah Category</a>
+<a href="/groups/create" type="button" class="btn btn-secondary mb-2 btn-sm">Tambah</a>
 @foreach ($groups as $group)
 
 <div class="card" style="width: 18rem;">
