@@ -16,7 +16,8 @@ use App\Http\Controllers\GroupsController;
 |
 */
 
-Route::get('', [DrinksController::class, 'welcome']);
+Route::get('', [DrinksController::class, 'index']);
+Route::get('/drinks/welcome',[DrinksController::class, 'welcome']);
 //Route::get('/drinks', [DrinksController::class, 'index']);
 //Route::get('/drinks/create', [DrinksController::class, 'create']);
 //Route::post('/drinks', [DrinksController::class, 'store']);
@@ -31,3 +32,10 @@ Route::resources([
     'trans' => TransController::class,
     'groups' => GroupsController::class,
 ]);
+Route::get('/drinks/addmember/{drink}', [DrinksController::class, 'addmember']);
+Route::put('/drinks/addmember/{drink}', [DrinksController::class, 'updateaddmember']);
+Route::put('/drinks/deleteaddmember/{drink}', [DrinksController::class, 'deleteaddmember']);
+
+Route::get('/groups/addmember/{group}', [GroupsController::class, 'addmember']);
+Route::put('/groups/addmember/{group}', [GroupsController::class, 'updateaddmember']);
+Route::put('/groups/deleteaddmember/{group}', [GroupsController::class, 'deleteaddmember']);

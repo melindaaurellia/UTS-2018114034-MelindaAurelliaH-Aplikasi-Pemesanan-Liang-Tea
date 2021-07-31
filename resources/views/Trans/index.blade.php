@@ -16,15 +16,15 @@
     </tr>
   </thead>
   <tbody>
-  @foreach ($trans as $t)
+  @foreach ($trans as $tran)
     <tr>
-    <td>{{$t->name}}</td>
-    <td>{!!$t->minuman !!}</td>
-    <td>{!!$t->ukuran !!}</td>
-    <td>{!!$t->jmlh !!}</td>
-    <td>{!!$t->price !!}</td>
-    <td><a href="/trans/{{$t->id}}/edit"><button type="button" class="btn btn-outline-secondary">Edit</a></button></td>
-    <form action="/trans/{{$t->id}}" method="POST">
+    <td>{{$tran->name}}</td>
+    <td>{!!$tran->minuman !!}</td>
+    <td>{!!$tran->ukuran !!}</td>
+    <td>{!!$tran->jmlh !!}</td>
+    <td>{!!$tran->price !!}</td>
+    <td><a href="/trans/{{$tran->id}}/edit"><button type="button" class="btn btn-outline-secondary">Edit</a></button></td>
+    <form action="/trans/{{$tran->id}}" method="POST">
     @csrf
     @method('DELETE')
     <td><button class="btn btn-outline-secondary">Delete</button></td>

@@ -18,9 +18,14 @@
 @enderror
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Size</label>
+    <label for="exampleInputPassword1">harga</label>
     <input type="text" class="form-control" name="size" id="exampleInputPassword1" value="{{ old('size')}}">
     @error('size')
+    <div class="alert alert-danger">{{ $message }}</div>
+    <div class="form-group">
+    <label for="exampleInputPassword1">Harga</label>
+    <input type="text" class="form-control" name="harga" id="exampleInputPassword1" value="{{ old('harga')}}">
+    @error('harga')
     <div class="alert alert-danger">{{ $message }}</div>
 @enderror
 <div a href=""class="form-group" >

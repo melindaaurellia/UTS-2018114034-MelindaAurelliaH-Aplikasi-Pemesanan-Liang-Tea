@@ -8,8 +8,6 @@
 <div class="card" style="width: 18rem;">
   <div class="card-body">
     <p class="card-text">{{$d->name}}</p>
-    <p class="card-text">{!!$d->description !!}</p>
-    <p class="card-text">{!!$d->harga !!}</p>
 
     <hr>
   

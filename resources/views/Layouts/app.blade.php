@@ -13,7 +13,7 @@
   <body>
         <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-2">
-    <a class="navbar-brand" href="/">Aplikasi Pemesanan Daily Fresh</a>
+    <a class="navbar-brand" href="/">Daily Fresh</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -30,7 +30,7 @@
         <a class="nav-link" href="/trans">Transaksi</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/groups">Groups Transaksi</a>
+        <a class="nav-link" href="/groups">Keterangan</a>
       </li>
   </div>
 </nav>

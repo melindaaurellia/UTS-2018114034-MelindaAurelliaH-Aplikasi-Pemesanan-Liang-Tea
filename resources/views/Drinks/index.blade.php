@@ -9,6 +9,7 @@
       <th scope="col">Minuman</th>
       <th scope="col"></th>
       <th scope="col">Size</th>
+      <th scope="col">Harga</th>
       <th scope="col"></th>
       <th scope="col"></th>
       <th scope="col"></th>
@@ -20,6 +21,7 @@
     <td><a href="/drinks/{{$drink->id}}" >{{$drink->nama}}</td>
     <td><img src="{{ url('image') }}/{{$drink['image']}}" width="150" heigh="200"></img></td>
     <td>{!!$drink->size !!}</td>
+    <td>{!!$drink->harga !!}</td>
     <td><a href="/drinks/{{$drink->id}}/edit"><button type="button" class="btn btn-outline-secondary">Edit</a></button></td>
     <form action="/drinks/{{ $drink->id}}" method="POST">
     @csrf

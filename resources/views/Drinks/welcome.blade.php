@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Aplikasi Pemesanan Daily Fresh')
+@section('title', 'Daily Fresh')
 @section('content')
 <div class="card" >
     <br></br>

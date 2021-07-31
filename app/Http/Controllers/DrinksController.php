@@ -30,6 +30,7 @@ class DrinksController extends Controller
             'nama' => 'required|unique:drinks|max:255',
             'image' => 'required',
             'size' => 'required',
+            'harga' => 'required',
             'data_id' => 'required'
         ]);
         $drinks = new Drinks;
@@ -37,6 +38,7 @@ class DrinksController extends Controller
         $drinks->nama = $request->nama;
         $drinks->image = $request->image;
         $drinks->size = $request->size;
+        $drinks->harga = $request->harga;
         $drinks->data_id = $request->data_id;
 
         $drinks->save();
@@ -62,6 +64,7 @@ class DrinksController extends Controller
             'nama' => 'required|unique:drinks|max:255',
             'image' => 'required',
             'size' => 'required',
+            'harga' => 'required',
             'data_id' => 'required'
         ]);
 
@@ -69,6 +72,7 @@ class DrinksController extends Controller
             'nama' => $request->nama,
             'image' => $request->image,
             'size' => $request->size,
+            'harga' => $request->harga,
             'data_id' => $request->data_id
         ]);
 

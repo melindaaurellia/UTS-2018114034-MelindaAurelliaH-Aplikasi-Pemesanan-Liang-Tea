@@ -7,16 +7,11 @@
 
 <div class="card" style="width: 18rem;">
   <div class="card-body">
-    <p class="card-text">{{$group->nama}}</p>
-    <p class="card-text">{!!$group->alamat !!}</p>
+    <p class="card-text">{{$group->ket}}</p>
 
     <hr>
-    @foreach ($group->trans as $t)
-    <li>Minuman : {!!$t->minuman !!}</li>
-    <li>Size : {!!$t->ukuran !!}</li>
-    <li>Jumlah : {!!$t->jmlh !!}</li>
-    <li>Harga : {!!$t->price !!}</li>
-  
+    @foreach ($group->trans as $tran)
+    <li>Nama Pelanggan : {!!$tran->name!!}</li>
     @endforeach
     </hr>
 

@@ -2,7 +2,10 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Api\DrinksController;
+use App\Http\Controllers\Api\DataController;
+use App\Http\Controllers\Api\TransController;
+use App\Http\Controllers\Api\GroupsController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -13,7 +16,11 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::get('', [DrinksController::class, 'index']);
+Route::resources([
+    'drinks' => DrinksController::class,
+    'data' => DataController::class,
+    'trans' => TransController::class,
+    'groups' => GroupsController::class,
+]);
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
